@@ -10,6 +10,32 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+ .marquee {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  overflow: hidden;
+}
+
+.marquee p {
+  position: absolute;
+  top: 0;
+  left: -50;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  animation: marquee 7s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
  .frame-container {
   display: none;
   position: fixed;
